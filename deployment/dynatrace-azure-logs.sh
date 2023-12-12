@@ -23,7 +23,7 @@ readonly DEPLOYMENT_NAME_REGEX="^[a-z0-9]{3,20}$"
 readonly EVENT_HUB_CONNECTION_STRING_REGEX="^Endpoint=sb:\/\/.*EntityPath=[^[:space:]]+$"
 readonly FILTER_CONFIG_REGEX="([^;\s].+?)=([^;]*)"
 readonly TAGS_REGEX="^([^<>,%&\?\/]+?:[^,]+,?)+$"
-readonly REQUIRE_VALID_CERTIFICATE_DEFAULT=true
+readonly REQUIRE_VALID_CERTIFICATE_DEFAULT=false
 
 print_help()
 {
