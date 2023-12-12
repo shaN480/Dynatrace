@@ -1,4 +1,8 @@
 fetch logs, from:now()-24h
+| makeTimeseries count = count(), by:{Content, "location : eastus"}, time:{timestamp}
+
+
+fetch logs, from:now()-24h
 | makeTimeseries count = count(), by:{Content, "RoleLocation : East US 2"}, time:{timestamp}
 
 
