@@ -1,3 +1,8 @@
+kubectl logs logstash-deployment-5c6b69b78f-fznc7 -n logstash
+kubectl edit configmap logstash-configmap -n logstash
+kubectl exec -it logstash-deployment-5c6b69b78f-fznc7 -n logstash -- /bin/bash
+
+
 # Dynatrace Azure Log Forwarder
 ## Overview
  This project provides a mechanism that allows streaming Azure logs from Azure Event Hub into Dynatrace Logs via Azure Function App. It supports both: Azure Resource Logs and Azure Activity Logs.
