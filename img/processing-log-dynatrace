@@ -1,0 +1,2 @@
+PARSE(content, "JSON{STRING:RoleLocation}(flat=true)") 
+| FIELDS_ADD(azure.location: RoleLocation)
