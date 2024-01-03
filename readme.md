@@ -9,6 +9,8 @@ sudo apt install zip unzip
 zip -r archive.zip my_folder
 zip -r output.zip foldername
 
+az webapp deployment source config-zip -g <your_resource_group_name> -n <application_name> --src <zip_file_path>
+
 
 # Dynatrace Azure Log Forwarder
 ## Overview
