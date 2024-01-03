@@ -37,6 +37,7 @@ alert_record = {
             "subscriptionId": "69b51384-146c-4685-9dab-5ae01877d7b8",
             "eventDataId": "d5d50404-bea9-471b-9894-400dc40b77e0",
             "resourceGroup": "",
+            "resourceLocation": "northeurope",
             "resourceId": "/subscriptions/69b51384-146c-4685-9dab-5ae01877d7b8/providers/microsoft.insights/diagnosticSettings/eventhub",
             "eventTimestamp": "2021-02-09T11:14:10.8715705Z",
             "operationName": "microsoft.insights/diagnosticSettings/write",
@@ -108,6 +109,7 @@ administrative_record = {
     "properties": {
         "statusCode": "NotFound",
         "serviceRequestId": None,
+        "resourceLocation": "northeurope",
         "statusMessage": "{\"error\":{\"code\":\"ResourceGroupNotFound\",\"message\":\"Resource group 'mw-gr1' could not be found.\"}}",
         "eventCategory": "Administrative",
         "entity": "/SUBSCRIPTIONS/69B51384-146C-4685-9DAB-5AE01877D7B8/RESOURCEGROUPS/MW-GR1/PROVIDERS/MICROSOFT.STORAGE/STORAGEACCOUNTS/DTMWSTORAGE1",
