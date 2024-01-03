@@ -4,6 +4,11 @@ kubectl edit configmap logstash-configmap -n logstash
 
 kubectl exec -it logstash-deployment-5c6b69b78f-fznc7 -n logstash -- /bin/bash
 
+zip -r archive.zip my_folder
+sudo apt install zip unzip
+zip -r archive.zip my_folder
+zip -r output.zip foldername
+
 
 # Dynatrace Azure Log Forwarder
 ## Overview
