@@ -399,7 +399,7 @@ done
 LOG_FORWARDER_TAGS="{${LOG_FORWARDER_TAGS}}"
 
 if [ "$ENABLE_USER_ASSIGNED_MANAGED_IDENTITY" = "true" ]; then
-  az group deployment create \
+  az deployment group create \
   --resource-group ${RESOURCE_GROUP} \
   --template-uri ${REPOSITORY_RELEASE_URL}${FUNCTION_ARM} \
   --parameters forwarderName="${DEPLOYMENT_NAME}" \
@@ -416,7 +416,7 @@ if [ "$ENABLE_USER_ASSIGNED_MANAGED_IDENTITY" = "true" ]; then
   eventhubConnectionCredentials="${EVENT_HUB_CONNECTION_CREDENTIALS}" \
   eventhubConnectionFullyQualifiedNamespace="${EVENT_HUB_CONNECTION_FULLY_QUALIFIED_NAMESPACE}"
 else
-  az group deployment create \
+  az deployment group create \
   --resource-group ${RESOURCE_GROUP} \
   --template-uri ${REPOSITORY_RELEASE_URL}${FUNCTION_ARM} \
   --parameters forwarderName="${DEPLOYMENT_NAME}" \
