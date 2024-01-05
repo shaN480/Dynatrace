@@ -73,6 +73,7 @@
         },
         "filterConfig": {
             "type": "string",
+	    "defaultValue": "",
             "metadata": {
                 "description": "Filter config"
             }
@@ -487,9 +488,7 @@
                     "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
                     "apiVersion": "2020-08-01-preview",
                     "name": "[concat(parameters('storageAccountName'), '/default/azure-webjobs-eventhub')]",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccountName'), 'default')]",
-                        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]",
+		    "dependsOn": [
                         "[variables('functionAppId')]"
                     ],
                     "properties": {
@@ -502,9 +501,7 @@
                     "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
                     "apiVersion": "2020-08-01-preview",
                     "name": "[concat(parameters('storageAccountName'), '/default/azure-webjobs-hosts')]",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccountName'), 'default')]",
-                        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]",
+		    "dependsOn": [
                         "[variables('functionAppId')]"
                     ],
                     "properties": {
@@ -517,9 +514,7 @@
                     "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
                     "apiVersion": "2020-08-01-preview",
                     "name": "[concat(parameters('storageAccountName'), '/default/azure-webjobs-secrets')]",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccountName'), 'default')]",
-                        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]",
+		    "dependsOn": [
                         "[variables('functionAppId')]"
                     ],
                     "properties": {
